@@ -1,0 +1,16 @@
+/boot: touch ssh, add wpa_supplicant
+raspi-config:
+- exapnd filesystem
+- enable vnc
+- set resolution
+- set gui boot autologin
+extract & install widevine plugin
+- cf https://gist.github.com/ruario/19a28d98d29d34ec9b184c42e5f8bf29
+- cf https://blog.vpetkov.net/2019/07/12/netflix-and-spotify-on-a-raspberry-pi-4-with-latest-default-chromium/
+log in over vnc, load play.spotify.com in chromium. login.
+set it as home
+set pi to auto-login to desktop
+set lxde to autostart chromium
+- cf https://raspberrypi.stackexchange.com/questions/101733/raspberry-pi-4-autostart-chromium
+set volume?
+reboot

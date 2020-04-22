@@ -1,11 +1,11 @@
 ## run this on pi to do some basic setup
 sudo -s <<HEREDOC
-# set screen resolution
-sed -i 's/.*hdmi_mode=.*/hdmi_mode=16/' /boot/config.txt 
-sed -i 's/.*hdmi_group=.*/hdmi_group=2/' /boot/config.txt
-# automate some config
 raspi-config nonint do_hostname streampi
+## set screen resolution to 1024x768
+raspi-config nonint do_resolution 2 16
+## enable VNC server
 raspi-config nonint do_vnc 0
+## boot to GUI, autologin
 raspi-config nonint do_boot_behaviour B4
 raspi-config nonint do_expand_rootfs
 reboot

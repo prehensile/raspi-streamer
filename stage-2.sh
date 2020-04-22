@@ -19,7 +19,7 @@ mv -f libwidevinecdm.so /usr/lib/chromium-browser
 sudo apt install shairport-sync
 
 # reboot every night
-echo "03 05 * * * reboot" | crontab
+echo "03 05 * * * root reboot" > /etc/cron.d/reboot_daily
 
 # reboot
 reboot

@@ -4,3 +4,4 @@ cp wpa_supplicant.conf $BOOT_VOLUME
 touch $BOOT_VOLUME/ssh
 cp stage-1.sh $BOOT_VOLUME
 cp stage-2.sh $BOOT_VOLUME
+cp chromium-launcher.sh $BOOT_VOLUME

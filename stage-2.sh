@@ -1,8 +1,11 @@
 ## install & setup streaming software after first reboot
 
 # run chromium when lxsession starts
+LAUNCHER_SCRIPT="chromium-launcher.sh" 
 mkdir -p ~/.config/lxsession/LXDE-pi
-echo "@chromium-browser https://play.spotify.com" > ~/.config/lxsession/LXDE-pi/autostart
+echo "@$HOME/$LAUNCHER_SCRIPT" > ~/.config/lxsession/LXDE-pi/autostart
+cp /boot/$LAUNCHER_SCRIPT ~/
+chmod +x ~/$LAUNCHER_SCRIPT
 
 sudo -s <<HEREDOC
 # install widevine plugin
